@@ -26,7 +26,7 @@ export const App = () => {
   const handleOnSubmit = async e => {
     e.preventDefault();
     try {
-      await dispatch(addNewContact({ firstName, phoneNumber }));
+      await dispatch(addNewContact({ name: firstName, phone: phoneNumber }));
       setFirstName('');
       setPhoneNumber('');
     } catch (error) {
